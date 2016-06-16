@@ -55,22 +55,24 @@ section.intro {
 		// text-align: right;
 		position: relative;
 		top: -10px;
-		padding: 0 $space*6 $space*6;
+		padding: 0 0 $space*6;
 		display: flex;
 		justify-content: center;
-		align-items: center;
 		flex-direction: column;
 		opacity: 0;
 		h1 {
 			color: $orange;
 			text-align: center;
+			width: 80%;
+			margin: 0 auto;
 		}
 		img {
-			width: 350px;
-			margin: 0 0 $space*2;
+			width: 60%;
+			margin: 0 auto $space*2;
 		}
 	}
 	div.hero {
+		flex: .85;
 		display: flex;
 		align-items: flex-end;
 		img {
@@ -81,7 +83,10 @@ section.intro {
 		}
 	}
 	@include tablet {
-		background: red;
+		flex-direction: column;
+		div.headline img {
+			display: none;
+		}
 	}
 }
 
