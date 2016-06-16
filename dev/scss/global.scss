@@ -51,14 +51,16 @@ section.intro {
 	& > div {
 		
 	}
-	div:nth-of-type(1) {
+	div.headline {
 		// text-align: right;
+		position: relative;
+		top: -10px;
 		padding: 0 $space*6 $space*6;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		// background: green;
+		opacity: 0;
 		h1 {
 			color: $orange;
 			text-align: center;
@@ -68,16 +70,24 @@ section.intro {
 			margin: 0 0 $space*2;
 		}
 	}
-	div:nth-of-type(2) {
+	div.hero {
 		display: flex;
 		align-items: flex-end;
 		img {
 			max-width: 100%;
+			position: relative;
+			top: 10px;
+			opacity: 0;
 		}
+	}
+	@include tablet {
+		background: red;
 	}
 }
 
 section.description {
+	position: relative;
+	z-index: 1;
 	background: $orange;
 	color: white;
 	align-items: flex-start;

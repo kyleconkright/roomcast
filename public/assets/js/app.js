@@ -21,7 +21,12 @@
 				controller: ['$scope', 'ngProgressLite', '$location', function($scope, ngProgressLite, $location) {
 					// $scope.features = 'hi';
 					$scope.path = $location.path();
-				}]
+				}],
+				link: function(scope, elem, attrs) {
+					anifade('div.headline',500,1000);
+					anifade('div.hero img',500,1000);
+
+				}
 			}
 		});
 
@@ -34,7 +39,11 @@
 				templateUrl: 'app/components/home/index.html'
 			})
 			.otherwise({redirectTo: '/'});
-	}]);	
+	}]);
+
+	var anifade = function(x,y,z) {
+		$(x).delay(y).animate({'opacity': 1, 'top':'0px'}, y);
+	}	
 
 
 })();

@@ -38,7 +38,9 @@ section {
 
 section.intro {
   padding: 0; }
-  section.intro div:nth-of-type(1) {
+  section.intro div.headline {
+    position: relative;
+    top: -10px;
     padding: 0 6rem 6rem;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -51,24 +53,33 @@ section.intro {
     align-items: center;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
-    flex-direction: column; }
-    section.intro div:nth-of-type(1) h1 {
+    flex-direction: column;
+    opacity: 0; }
+    section.intro div.headline h1 {
       color: #EF8824;
       text-align: center; }
-    section.intro div:nth-of-type(1) img {
+    section.intro div.headline img {
       width: 350px;
       margin: 0 0 2rem; }
-  section.intro div:nth-of-type(2) {
+  section.intro div.hero {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-align-items: flex-end;
     -ms-flex-align: end;
     align-items: flex-end; }
-    section.intro div:nth-of-type(2) img {
-      max-width: 100%; }
+    section.intro div.hero img {
+      max-width: 100%;
+      position: relative;
+      top: 10px;
+      opacity: 0; }
+  @media handheld, screen and (max-width: 769px) {
+    section.intro {
+      background: red; } }
 
 section.description {
+  position: relative;
+  z-index: 1;
   background: #EF8824;
   color: white;
   -webkit-align-items: flex-start;
@@ -87,7 +98,7 @@ header {
     header .container div.logo {
       background: url("../img/rc-logo-color.png") left no-repeat;
       background-size: contain;
-      width: 130px;
+      width: 140px;
       margin: 1rem; }
     header .container ul.menu {
       -webkit-flex: 1;
