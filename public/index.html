@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<base href="/app" />
+	<title>RoomCast</title>
+	<script type="text/javascript" src="../assets/js/vendor.js"></script>
+	<script type="text/javascript" src="../assets/js/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700,700i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body ng-controller="MainController">
+
+	<navbar></navbar>
+	
+	<ng-view autoscroll></ng-view>
+
+	<footer></footer>
+		
+</body>
+
+</html>
