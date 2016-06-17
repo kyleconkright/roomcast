@@ -24,6 +24,24 @@ p {
   p:last-of-type {
     margin: 0; }
 
+a.button {
+  background: #1EB1FC;
+  line-height: 48px;
+  display: inline-block;
+  padding: 0 32px;
+  border: 8px solid white;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+div.request {
+  width: 80%;
+  margin: 0 auto;
+  text-align: right;
+  position: absolute;
+  bottom: -20px;
+  left: 10%;
+  height: 48px; }
+
 section .container {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -94,7 +112,21 @@ section.description {
     position: absolute;
     top: 230px; }
     section.description .hand img {
-      width: 400px; }
+      width: 450px; }
+section#how-it-works {
+  padding: 64px 0; }
+  section#how-it-works div.space {
+    -webkit-flex: .75;
+    -ms-flex: .75;
+    flex: .75; }
+  section#how-it-works h3 {
+    color: #ABAEAF; }
+  section#how-it-works h2 {
+    color: #1EB1FC;
+    font-weight: 400;
+    margin: 8px 0; }
+    section#how-it-works h2:not(:first-of-type) {
+      margin: 48px 0 8px; }
 
 header {
   position: fixed;

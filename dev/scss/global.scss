@@ -33,6 +33,26 @@ p {
 	}
 }
 
+a.button {
+	background: $blue;
+	line-height: $space*3;
+	display: inline-block;
+	padding: 0 $space*2;
+	border: $space/2 solid white;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+div.request {
+	width: 80%;
+	margin: 0 auto;
+	text-align: right;
+	position: absolute;
+	bottom: -$space*1.25;
+	left: 10%;
+	height: $space*3;
+}
+
 section {
 	.container {
 		display: flex;
@@ -98,8 +118,25 @@ section {
 			position: absolute;
 			top: 230px;
 			img {
-				width: 400px;
+				width: 450px;
 
+			}
+		}
+	}
+	&#how-it-works {
+		padding: $space*4 0;
+		div.space {
+			flex: .75;
+		}
+		h3 {
+			color: $grey2;
+		}
+		h2 {
+			color: $blue;
+			font-weight: 400;
+			margin: $space/2 0;
+			&:not(:first-of-type) {
+				margin: $space*3 0 $space/2;
 			}
 		}
 	}
