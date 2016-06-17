@@ -142,7 +142,7 @@ section {
 		}
 	}
 	&#hotel-room {
-		height: 50vh;
+		height: 80vh;
 		min-height: 500px;
 		background: url('../../assets/img/hotelroom.jpg') center;
 		background-size: cover;
@@ -159,7 +159,7 @@ section {
 				position: relative;
 				width: 500px;
 				flex: .5;
-				padding: $space $space*3 $space*8;
+				padding: $space $space*3 $space*4;
 				.chromecast-icon {
 					position: absolute;
 					width: 100%;

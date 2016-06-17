@@ -130,7 +130,7 @@ section#how-it-works {
     section#how-it-works h2:not(:first-of-type) {
       margin: 48px 0 8px; }
 section#hotel-room {
-  height: 50vh;
+  height: 80vh;
   min-height: 500px;
   background: url("../../assets/img/hotelroom.jpg") center;
   background-size: cover;
@@ -157,7 +157,7 @@ section#hotel-room {
       -webkit-flex: .5;
       -ms-flex: .5;
       flex: .5;
-      padding: 16px 48px 128px; }
+      padding: 16px 48px 64px; }
       section#hotel-room div.container div.holder .chromecast-icon {
         position: absolute;
         width: 100%;
