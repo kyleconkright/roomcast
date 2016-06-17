@@ -25,7 +25,7 @@
 				link: function(scope, elem, attrs) {
 					anifade('div.headline',500,800);
 					anifade('div.hero img',400,1500);
-					window.sr = ScrollReveal();
+					window.sr = ScrollReveal({ reset: true });
 					sr.reveal('.hand');
 				}
 			}
