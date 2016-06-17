@@ -46,6 +46,8 @@
 					window.sr = ScrollReveal({ reset: true });
 					sr.reveal('.hand', {rotate: {z: 20 }});
 					sr.reveal('#hotel-room .holder');
+
+					openAnswer('li.question span.q');
 				}
 			}
 		});
@@ -72,6 +74,18 @@
 		} else {
 			a.removeClass("dark");
 		}
+	}
+
+	var openAnswer = function(x){
+		$(x).on('click', function(){
+			if($(this).hasClass('open')) {
+				$(this).removeClass('open');
+				$(this).find('.arrow').html('<i class="material-icons">keyboard_arrow_right</i>');
+			} else {
+				$(this).addClass('open');
+				$(this).find('.arrow').html('<i class="material-icons">keyboard_arrow_down</i>');
+			}
+		});
 	}
 
 

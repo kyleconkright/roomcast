@@ -185,5 +185,34 @@ section {
 			margin: $space/2 0;
 		}
 	}
+	&#faq {
+		background: $grey;
+		padding: $space*4 0;
+		ul {
+			li.question {
+				margin: 0 0 $space;
+				span.q {
+					font-weight: 400;
+					cursor: pointer;
+					display: block;
+					margin: 0 0 12px -24px;
+					font-size: 1.25em;
+				}
+				span.q ~ span.a {
+					display: none;
+				}
+				span.q.open ~ span.a {
+					display: block;
+				}
+				span.arrow i.material-icons {
+					position: relative;
+					top: 6px;
+					width: 24px;
+					color: $blue;
+				}
+			}
+		}
+		
+	}
 }
 
