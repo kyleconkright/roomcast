@@ -10,7 +10,25 @@
 		.directive('navbar', function(){
 			return {
 				restrict: "E",
-				templateUrl: 'app/components/nav/nav.html'
+				controller: ['$scope', function($scope) {
+					$scope.mobileMenu = function() {
+						var menu = 'header .menu';
+						var menuTrigger = '.mobile-menu-trigger';
+						if($(menu).hasClass('open')) {
+							$(menu).removeClass('open');
+							$(menuTrigger).html('<i class="material-icons">menu</i>');
+						} else {
+							$(menu).addClass('open');
+							$(menuTrigger).html('<i class="material-icons">chevron_right</i>');
+						}
+					}
+				}],
+				templateUrl: 'app/components/nav/nav.html',
+				link: function(scope, element, attrs) {
+					$(window).scroll(function() {
+						checkScroll($(element).find('header'));
+					});
+				}
 			}
 		});	
 
@@ -26,7 +44,7 @@
 					anifade('div.headline',500,800);
 					anifade('div.hero img',400,1500);
 					window.sr = ScrollReveal({ reset: true });
-					sr.reveal('.hand');
+					sr.reveal('.hand', {rotate: {z: 20 }});
 				}
 			}
 		});
@@ -46,7 +64,14 @@
 		$(x).delay(y).animate({'opacity': 1, 'top':'0px'}, z);
 	}
 
-
+	var checkScroll = function(a) {
+		var scroll = $(window).scrollTop();
+		if (scroll >= 100) {
+			a.addClass("dark");
+		} else {
+			a.removeClass("dark");
+		}
+	}
 
 
 
