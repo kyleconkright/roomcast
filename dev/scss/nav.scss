@@ -2,40 +2,35 @@
 @import '_mixins';
 
 header {
-	background: white;
 	position: fixed;
+	background: white;
 	top: 0;
 	z-index: 500;
 	width: 100%;
 	transition: all .2s;
 	.container {
 		display: flex;
-		div.logo, ul.menu {
-			// flex: 1;
-		}
+		padding: $space*2 0;
 		div.logo {
 			background: url('../img/rc-logo-color.png') left no-repeat;
 			background-size: contain;
-			// flex: .5;
 			width: 140px;
-			margin: $space;
+			height: 20px;
+			@include tablet {
+
+			}
 		}
 		ul.menu {
 			flex: 1;
 			text-align: right;
-			line-height: 100px;
-			transition: all .2s;
+			transition: right .2s;
 			li {
 				display: inline;
 				a {
-					margin: 0 5px;
+					margin: 0 0 0 10px;
 					font-weight: 300;
 					color: #797979;
 					letter-spacing: -0.01em;
-					line-height: 0;
-				}
-				ul {
-					display: none;
 				}
 			}
 			@include tablet {
@@ -44,20 +39,21 @@ header {
 				width: 300px;
 				height: 120vh;
 				overflow: hidden;
-				background: rgba(0,0,20,.9);
-				// color: $lighterGrey;
+				background: rgba(255,255,255,.98);
 				right: -300px;
 				top: 0;
 				a {
 					display: block;
 					text-align: left;
 					padding: $space;
+					font-weight: 400 !important;
+					color: #333 !important;
 				}
 				&.open {
 					right: 0;
+					box-shadow: 0 0 15px rgba(0,0,0,.2);
 				}
 				&.open ~ .mobile-menu-trigger {
-					// color: $lighterGrey;
 				}
 			}
 		}
@@ -65,19 +61,20 @@ header {
 	&.dark {
 		background: $grey;
 		.container {
-			ul.menu {
-				line-height: 60px;
-			}
+
 		}
 	}
 	.mobile-menu-trigger {display: none;}
 	@include tablet {
 		a.mobile-menu-trigger {
+			// background: blue;
 			position: absolute;
 			display: block;
-			padding: $space*2 $space $space;
-			right: -$space;
-			top: -$space;
+			padding: $space/1.5 0;
+			height: 100%;
+			// top: 50%;
+			right: 5%;
+			top: $space;
 			
 			i {
 				font-size: 28px;
