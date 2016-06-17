@@ -176,6 +176,22 @@ section#hotel-room {
     color: #1EB1FC;
     font-weight: 400;
     margin: 8px 0; }
+section#installation {
+  padding: 64px 0; }
+  section#installation h2 {
+    color: #1EB1FC;
+    font-weight: 400;
+    margin: 8px 0; }
+  section#installation a {
+    display: block;
+    color: #1EB1FC;
+    margin: 0 0 0 -8px;
+    font-weight: 700; }
+    section#installation a i.material-icons {
+      color: inherit;
+      position: relative;
+      top: 6px;
+      width: 16px; }
 section#faq {
   background: #EEEEEE;
   padding: 64px 0; }

@@ -39,6 +39,7 @@
 				controller: ['$scope', 'ngProgressLite', '$location', function($scope, ngProgressLite, $location) {
 					// $scope.features = 'hi';
 					$scope.path = $location.path();
+					$scope.request = requestSample('a.button.request')
 				}],
 				link: function(scope, elem, attrs) {
 					anifade('div.headline',500,800);
@@ -85,6 +86,12 @@
 				$(this).addClass('open');
 				$(this).find('.arrow').html('<i class="material-icons">keyboard_arrow_down</i>');
 			}
+		});
+	}
+
+	var requestSample = function(x) {
+		$(x).on('click', function(){
+			alert('hello');
 		});
 	}
 

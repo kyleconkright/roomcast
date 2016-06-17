@@ -185,6 +185,26 @@ section {
 			margin: $space/2 0;
 		}
 	}
+	&#installation {
+		padding: $space*4 0;
+		h2 {
+			color: $blue;
+			font-weight: 400;
+			margin: $space/2 0;
+		}
+		a {
+			display: block;
+			color: $blue;
+			margin: 0 0 0 -8px;
+			font-weight: 700;
+			i.material-icons {
+				color: inherit;
+				position: relative;
+				top: 6px;
+				width: 16px;
+			}
+		}
+	}
 	&#faq {
 		background: $grey;
 		padding: $space*4 0;
