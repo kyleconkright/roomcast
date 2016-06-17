@@ -118,8 +118,9 @@ section {
 			position: absolute;
 			top: 230px;
 			img {
-				width: 450px;
-
+				max-width: 60%;
+				min-width: 50%;
+				width: 50%;
 			}
 		}
 	}
@@ -138,6 +139,50 @@ section {
 			&:not(:first-of-type) {
 				margin: $space*3 0 $space/2;
 			}
+		}
+	}
+	&#hotel-room {
+		height: 50vh;
+		min-height: 500px;
+		background: url('../../assets/img/hotelroom.jpg') center;
+		background-size: cover;
+		position: relative;
+		div.container {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: inherit;
+			min-height: inherit;
+			div.holder {
+				background: white;
+				position: relative;
+				width: 500px;
+				flex: .5;
+				padding: $space $space*3 $space*8;
+				.chromecast-icon {
+					position: absolute;
+					width: 100%;
+					left: 0;
+					bottom: -54px;
+					text-align: center;
+					img {
+						background: white;
+						padding: $space/2;
+						border-radius: 100px;
+						width: 100px;
+					}
+				}
+				img.powered {
+					width: 70%;
+					margin: $space*2 0;
+				}
+			}
+		}
+		h2 {
+			color: $blue;
+			font-weight: 400;
+			margin: $space/2 0;
 		}
 	}
 }

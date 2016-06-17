@@ -45,6 +45,7 @@
 					anifade('div.hero img',400,1500);
 					window.sr = ScrollReveal({ reset: true });
 					sr.reveal('.hand', {rotate: {z: 20 }});
+					sr.reveal('#hotel-room .holder');
 				}
 			}
 		});

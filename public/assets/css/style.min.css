@@ -112,7 +112,9 @@ section.description {
     position: absolute;
     top: 230px; }
     section.description .hand img {
-      width: 450px; }
+      max-width: 60%;
+      min-width: 50%;
+      width: 50%; }
 section#how-it-works {
   padding: 64px 0; }
   section#how-it-works div.space {
@@ -127,6 +129,53 @@ section#how-it-works {
     margin: 8px 0; }
     section#how-it-works h2:not(:first-of-type) {
       margin: 48px 0 8px; }
+section#hotel-room {
+  height: 50vh;
+  min-height: 500px;
+  background: url("../../assets/img/hotelroom.jpg") center;
+  background-size: cover;
+  position: relative; }
+  section#hotel-room div.container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: inherit;
+    min-height: inherit; }
+    section#hotel-room div.container div.holder {
+      background: white;
+      position: relative;
+      width: 500px;
+      -webkit-flex: .5;
+      -ms-flex: .5;
+      flex: .5;
+      padding: 16px 48px 128px; }
+      section#hotel-room div.container div.holder .chromecast-icon {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: -54px;
+        text-align: center; }
+        section#hotel-room div.container div.holder .chromecast-icon img {
+          background: white;
+          padding: 8px;
+          border-radius: 100px;
+          width: 100px; }
+      section#hotel-room div.container div.holder img.powered {
+        width: 70%;
+        margin: 32px 0; }
+  section#hotel-room h2 {
+    color: #1EB1FC;
+    font-weight: 400;
+    margin: 8px 0; }
 
 header {
   position: fixed;
