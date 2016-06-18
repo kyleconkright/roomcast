@@ -39,7 +39,8 @@
 				controller: ['$scope', 'ngProgressLite', '$location', function($scope, ngProgressLite, $location) {
 					// $scope.features = 'hi';
 					$scope.path = $location.path();
-					$scope.request = requestSample('a.button.request')
+					$scope.request = closeForm('a.button.request','div#request-sample-box');
+					$scope.openForm = closeForm('div.close','div#request-sample-box')
 				}],
 				link: function(scope, elem, attrs) {
 					anifade('div.headline',500,800);
@@ -91,7 +92,17 @@
 
 	var requestSample = function(x) {
 		$(x).on('click', function(){
-			alert('hello');
+			alert('open');
+		});
+	}
+
+	var closeForm = function(x, y) {
+		$(x).on('click', function(){
+			if($(y).hasClass('open')){
+				$(y).removeClass('open');
+			} else {
+				$(y).addClass('open');
+			}
 		});
 	}
 
