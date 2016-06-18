@@ -39,12 +39,13 @@ div#request-sample-box {
 		}
 		div {
 			label, input {
-				// display: inline-block;
+				display: inline-block;
 				// text-transform: uppercase;
 				font-size: 1.25em;
 				letter-spacing: 1px;
 				font-weight: 100;
 				color: #eee;
+				margin: 0 0 $space/4;
 			}
 			input {
 				display: block;
@@ -61,12 +62,15 @@ div#request-sample-box {
 		}
 		button {
 			background: $blue;
-			font-size: 2em;
-			padding: $space/2 $space;
+			font-size: 1.5em;
+			letter-spacing: 1px;
+			padding: $space/1.25 $space*1.5;
 			color: white;
 			font-weight: 400;
 			border: none;
 			border-radius: 2px;
+			float: right;
+			cursor: pointer;
 			margin: $space*2 0 0;
 			@include tablet {
 				width: 100%;
