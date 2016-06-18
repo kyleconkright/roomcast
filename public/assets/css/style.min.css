@@ -300,7 +300,8 @@ div#request-sample-box {
   -webkit-transform: scale(0);
   -ms-transform: scale(0);
   transform: scale(0);
-  transition: all .3s ease-in-out; }
+  opacity: 0;
+  transition: all .1s ease-in-out; }
   div#request-sample-box div.close {
     position: absolute;
     cursor: pointer;
@@ -347,4 +348,29 @@ div#request-sample-box {
   div#request-sample-box.open {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
-    transform: scale(1); }
+    transform: scale(1);
+    opacity: 1;
+    -webkit-animation: drop 1s;
+    animation: drop 1s; }
+
+@-webkit-keyframes drop {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes drop {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
