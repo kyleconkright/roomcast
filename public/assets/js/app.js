@@ -39,8 +39,8 @@
 				controller: ['$scope', 'ngProgressLite', '$location', function($scope, ngProgressLite, $location) {
 					// $scope.features = 'hi';
 					$scope.path = $location.path();
-					$scope.request = closeForm('a.button.request','div#request-sample-box');
-					$scope.openForm = closeForm('div.close','div#request-sample-box')
+					// $scope.request = closeForm('a.button.request','div#request-sample-box');
+					// $scope.openForm = closeForm('div.close','div#request-sample-box')
 				}],
 				link: function(scope, elem, attrs) {
 					anifade('div.headline',500,800);
@@ -106,7 +106,7 @@
 		});
 	}
 
-
+	// $('#how-it-works').scrollTo(200);
 
 
 })();

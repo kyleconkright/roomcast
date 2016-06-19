@@ -12,10 +12,10 @@ header {
 		display: flex;
 		padding: $space*2 0;
 		div.logo {
-			background: url('../img/rc-logo-color.png') left no-repeat;
+			background: url('../img/ta-logo-color.png') left no-repeat;
 			background-size: contain;
 			width: 140px;
-			height: 20px;
+			height: 30px;
 			@include tablet {
 
 			}
@@ -29,6 +29,7 @@ header {
 				a {
 					margin: 0 0 0 10px;
 					font-weight: 300;
+					font-size: .95em;
 					color: #797979;
 					letter-spacing: -0.01em;
 				}

@@ -26,7 +26,7 @@
 				<p>After joining the network, guests will discover the "cast button" within all of their cast-enabled apps.</p>
 			</div>
 		</div>
-		<div class="request"><a href class="button request">Request Sample</a></div>
+		<div class="request"><a href="http://www.teleadapt.com/request-quote" target="_blank" class="button request">Request Sample</a></div>
 		<div class="hand"><img src="assets/img/dial.png"></div>
 	</section>
 
@@ -54,7 +54,7 @@
 		</div>
 	</section>
 
-	<section id="hotel-room">
+	<section id="powered-by-chromecast">
 		<div class="container">
 			<div class="holder">
 				<h2>Let Guests Stream Their Content</h2>
@@ -77,7 +77,7 @@
 		</div>
 	</section>
 
-	<section id="faq">
+	<!-- <section id="faq">
 		<div class="container">
 			<ul>
 				<li class="question">
@@ -91,33 +91,43 @@
 				</li>	
 			</ul>
 		</div>
-	</section>
+	</section> -->
 
 	<div id="request-sample-box">
 		<div class="close"><i class="material-icons">close</i></div>
-		<form>
+		<form id="RoomCast" target="_blank" method="post" action="http://analytics.clickdimensions.com/forms/h/aU2xh5ahBx0SIibIBaQksw" name="RoomCast">
 			<h1>Get a sample of RoomCast</h1>
 			<div>
-				<label for="qr2_firstname">First Name</label>
-				<input id="qr2_firstname" type="text" name="qr2_firstname" autocomplete="off"> 
+				<label for="rc_firstname">First Name</label>
+				<input id="rc_firstname" type="text" name="rc_firstname" autocomplete="off"> 
 			</div>
 
 			<div>
-				<label for="qr2_lastname">Last Name</label>
-				<input id="qr2_lastname" type="text" name="qr2_lastname" autocomplete="off">
+				<label for="rc_lastname">Last Name</label>
+				<input id="rc_lastname" type="text" name="rc_lastname" autocomplete="off">
 			</div>
 
 			<div>
-				<label for="qr2_email">Email Address</label>
-				<input id="qr2_email" type="email" name="qr2_email" autocomplete="off">
+				<label for="rc_email">Email Address</label>
+				<input id="rc_email" type="email" name="rc_email" autocomplete="off">
 			</div>
 
 			<div>
-				<label for="qr2_company">Company</label>
-				<input id="qr2_company" type="text" name="qr2_company" autocomplete="off">
+				<label for="rc_company">Company</label>
+				<input id="rc_company" type="text" name="rc_company" autocomplete="off">
 			</div>
 			<button>Send Me a Sample</button>
 		</form>
 	</div>
+
+	<script type="text/javascript"> 
+	  var cdJsHost = (("https:" == document.location.protocol) ? "https://" : "http://"); 
+	  document.write(unescape("%3Cscript src='" + cdJsHost + "analytics.clickdimensions.com/ts.js' type='text/javascript'%3E%3C/script%3E")); 
+	</script><script type="text/javascript"> 
+	  var cdAnalytics = new clickdimensions.Analytics('analytics.clickdimensions.com'); 
+	  cdAnalytics.setAccountKey('a2s9xicQrnEix73OtAD3Hl'); 
+	  cdAnalytics.setDomain('teleadapt.com'); 
+	  cdAnalytics.trackPage(); 
+	</script>
 
 </home>

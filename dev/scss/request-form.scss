@@ -79,7 +79,7 @@ div#request-sample-box {
 	&.open {
 		transform: scale(1);
 		opacity: 1;
-		animation: drop 1s;
+		animation: drop .5s;
 	}
 }
 
@@ -91,7 +91,7 @@ div#request-sample-box {
     }
     50% {
         // transform: ;
-        transform: scale(1.01);
+        transform: scale(1.05);
     }
     100% {
     	transform: scale(1);
