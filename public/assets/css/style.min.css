@@ -1,3 +1,25 @@
+footer .container {
+  padding: 32px 0;
+  font-size: .9em;
+  border: solid 1px #EEEEEE;
+  border-width: 1px 0 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  footer .container a {
+    color: #1EB1FC; }
+  footer .container > * {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+  footer .container div:last-of-type {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+
 header {
   position: fixed;
   background: white;
