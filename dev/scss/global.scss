@@ -158,15 +158,15 @@ section {
 			}
 			.hand {
 				position: absolute;
-				top: 230px;
+				top: 200px;
 			    left: -9%;
 				@include tablet {
 					display: none;
 				}
 				img {
-					max-width: 60%;
+					max-width: 67%;
 					min-width: 50%;
-					width: 50%;
+					width: 59%;
 				}
 			}
 		}
@@ -202,6 +202,7 @@ section {
 		position: relative;
 		@include tablet {
 			padding: $space 0;
+			height: 60vh;
 		}
 		div.container {
 			display: flex;
@@ -244,6 +245,21 @@ section {
 			color: $blue;
 			font-weight: 400;
 			margin: $space/2 0;
+		}
+		.icons {
+			position: absolute;
+			width: 100%;
+			bottom: -15%;
+			@include tablet {
+				display: none;
+			}
+			img {
+				width: 30%;
+				max-width: 420px;
+				min-width: 280px;
+				float: right;
+				padding: 0 $space;
+			}
 		}
 	}
 	&#compatible-devices {
