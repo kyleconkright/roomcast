@@ -41,6 +41,10 @@ div.request {
   bottom: -20px;
   left: 10%;
   height: 48px; }
+  @media handheld, screen and (max-width: 769px) {
+    div.request a.button {
+      width: 100%;
+      text-align: center; } }
 
 section .container {
   display: -webkit-flex;
@@ -76,6 +80,11 @@ section .container {
       text-align: right; }
 section.intro {
   margin: 128px 0 0; }
+  @media handheld, screen and (max-width: 769px) {
+    section.intro .container {
+      -webkit-flex-direction: column !important;
+      -ms-flex-direction: column !important;
+      flex-direction: column !important; } }
   section.intro .headline {
     position: relative;
     opacity: 0;
@@ -83,9 +92,17 @@ section.intro {
     section.intro .headline h1 {
       margin: 0 0 32px;
       color: #EF8824; }
+      @media handheld, screen and (max-width: 769px) {
+        section.intro .headline h1 {
+          text-align: center;
+          width: 100%; } }
     section.intro .headline img {
       margin: 0 -20px 0 0;
       width: 75%; }
+      @media handheld, screen and (max-width: 769px) {
+        section.intro .headline img {
+          width: 50%;
+          margin: 16px auto; } }
   section.intro .hero {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -108,15 +125,32 @@ section.description {
   padding: 64px 0;
   max-width: 1280px;
   margin: 0 auto; }
+  @media handheld, screen and (max-width: 769px) {
+    section.description .container {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      section.description .container h1 {
+        text-align: center;
+        width: 100%;
+        margin: 0 0 16px; } }
   section.description .hand {
     position: absolute;
     top: 230px; }
+    @media handheld, screen and (max-width: 769px) {
+      section.description .hand {
+        display: none; } }
     section.description .hand img {
       max-width: 60%;
       min-width: 50%;
       width: 50%; }
 section#how-it-works {
   padding: 64px 0; }
+  @media handheld, screen and (max-width: 769px) {
+    section#how-it-works .container {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
   section#how-it-works div.space {
     -webkit-flex: .75;
     -ms-flex: .75;
@@ -158,6 +192,9 @@ section#powered-by-chromecast {
       -ms-flex: .5;
       flex: .5;
       padding: 16px 48px 64px; }
+      @media handheld, screen and (max-width: 769px) {
+        section#powered-by-chromecast div.container div.holder {
+          width: 90%; } }
       section#powered-by-chromecast div.container div.holder .chromecast-icon {
         position: absolute;
         width: 100%;
@@ -178,6 +215,11 @@ section#powered-by-chromecast {
     margin: 8px 0; }
 section#installation {
   padding: 64px 0; }
+  @media handheld, screen and (max-width: 769px) {
+    section#installation .container {
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
   section#installation h2 {
     color: #1EB1FC;
     font-weight: 400;
@@ -212,6 +254,75 @@ section#faq {
       top: 6px;
       width: 24px;
       color: #1EB1FC; }
+
+header {
+  position: fixed;
+  background: white;
+  top: 0;
+  z-index: 500;
+  width: 100%;
+  transition: all .2s; }
+  header .container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 32px 0; }
+    header .container div.logo {
+      background: url("../img/ta-logo-color.png") left no-repeat;
+      background-size: contain;
+      width: 140px;
+      height: 30px; }
+      header .container div.logo a {
+        display: block;
+        width: 100%;
+        height: 100%; }
+    header .container ul.menu {
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      text-align: right;
+      transition: right .2s; }
+      header .container ul.menu li {
+        display: inline; }
+        header .container ul.menu li a {
+          margin: 0 0 0 10px;
+          font-weight: 300;
+          font-size: .95em;
+          color: #797979;
+          letter-spacing: -0.01em; }
+      @media handheld, screen and (max-width: 769px) {
+        header .container ul.menu {
+          position: fixed;
+          padding: 16px;
+          width: 300px;
+          height: 120vh;
+          overflow: hidden;
+          background: rgba(255, 255, 255, 0.98);
+          right: -300px;
+          top: 0; }
+          header .container ul.menu a {
+            display: block;
+            text-align: left;
+            padding: 16px;
+            font-weight: 400 !important;
+            color: #333 !important; }
+          header .container ul.menu.open {
+            right: 0;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); } }
+  header.dark {
+    background: #EEEEEE; }
+  header .mobile-menu-trigger {
+    display: none; }
+  @media handheld, screen and (max-width: 769px) {
+    header a.mobile-menu-trigger {
+      position: absolute;
+      display: block;
+      padding: 10.66667px 0;
+      height: 100%;
+      right: 5%;
+      top: 16px; }
+      header a.mobile-menu-trigger i {
+        font-size: 28px; } }
 
 div#request-sample-box {
   background: #1EB1FC;
@@ -314,68 +425,3 @@ div#request-sample-box {
   100% {
     -webkit-transform: scale(1);
     transform: scale(1); } }
-
-header {
-  position: fixed;
-  background: white;
-  top: 0;
-  z-index: 500;
-  width: 100%;
-  transition: all .2s; }
-  header .container {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    padding: 32px 0; }
-    header .container div.logo {
-      background: url("../img/ta-logo-color.png") left no-repeat;
-      background-size: contain;
-      width: 140px;
-      height: 30px; }
-    header .container ul.menu {
-      -webkit-flex: 1;
-      -ms-flex: 1;
-      flex: 1;
-      text-align: right;
-      transition: right .2s; }
-      header .container ul.menu li {
-        display: inline; }
-        header .container ul.menu li a {
-          margin: 0 0 0 10px;
-          font-weight: 300;
-          font-size: .95em;
-          color: #797979;
-          letter-spacing: -0.01em; }
-      @media handheld, screen and (max-width: 769px) {
-        header .container ul.menu {
-          position: fixed;
-          padding: 16px;
-          width: 300px;
-          height: 120vh;
-          overflow: hidden;
-          background: rgba(255, 255, 255, 0.98);
-          right: -300px;
-          top: 0; }
-          header .container ul.menu a {
-            display: block;
-            text-align: left;
-            padding: 16px;
-            font-weight: 400 !important;
-            color: #333 !important; }
-          header .container ul.menu.open {
-            right: 0;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); } }
-  header.dark {
-    background: #EEEEEE; }
-  header .mobile-menu-trigger {
-    display: none; }
-  @media handheld, screen and (max-width: 769px) {
-    header a.mobile-menu-trigger {
-      position: absolute;
-      display: block;
-      padding: 10.66667px 0;
-      height: 100%;
-      right: 5%;
-      top: 16px; }
-      header a.mobile-menu-trigger i {
-        font-size: 28px; } }
