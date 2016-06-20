@@ -7,7 +7,8 @@ footer .container {
   display: -ms-flexbox;
   display: flex; }
   footer .container a {
-    color: #1EB1FC; }
+    color: #1EB1FC;
+    margin: 0 0 0 8px; }
   footer .container > * {
     -webkit-flex: 1;
     -ms-flex: 1;

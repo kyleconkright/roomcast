@@ -9,6 +9,7 @@ footer .container {
 	display: flex;
 	a {
 		color: $blue;
+		margin: 0 0 0 $space/2;
 	}
 	> * {
 		flex: 1;
