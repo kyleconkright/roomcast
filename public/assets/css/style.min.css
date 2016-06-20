@@ -252,7 +252,9 @@ section#compatible-devices {
       display: block; }
       @media handheld, screen and (max-width: 769px) {
         section#compatible-devices div.devices img {
-          margin: 32px auto 0;
+          margin: 32px auto 0; } }
+      @media handheld, screen and (max-width: 414px) {
+        section#compatible-devices div.devices img {
           width: 100%; } }
   section#compatible-devices div.copy h2 {
     color: #1EB1FC;
