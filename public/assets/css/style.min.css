@@ -169,6 +169,9 @@ section#powered-by-chromecast {
   background: url("../../assets/img/hotelroom.jpg") center;
   background-size: cover;
   position: relative; }
+  @media handheld, screen and (max-width: 769px) {
+    section#powered-by-chromecast {
+      padding: 16px 0; } }
   section#powered-by-chromecast div.container {
     display: -webkit-flex;
     display: -ms-flexbox;

@@ -184,6 +184,9 @@ section {
 		background: url('../../assets/img/hotelroom.jpg') center;
 		background-size: cover;
 		position: relative;
+		@include tablet {
+			padding: $space 0;
+		}
 		div.container {
 			display: flex;
 			flex-direction: column;
