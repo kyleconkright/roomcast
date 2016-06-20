@@ -43,6 +43,19 @@ a.button {
 	text-transform: uppercase;
 }
 
+a.brochure {
+	display: block;
+	color: $blue;
+	margin: 0 0 0 -8px;
+	font-weight: 700;
+	i.material-icons {
+		color: inherit;
+		position: relative;
+		top: 6px;
+		width: 16px;
+	}
+}
+
 div.request {
 	width: 80%;
 	margin: 0 auto;
@@ -230,6 +243,27 @@ section {
 			margin: $space/2 0;
 		}
 	}
+	&#compatible-devices {
+		padding: $space*4 0;
+		border-bottom: 1px solid $grey;
+		div.devices {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img {
+				width: 80%;
+				margin: 0 auto;
+				display: block;
+			}
+		}
+		div.copy {
+			h2 {
+				color: $blue;
+				font-weight: 400;
+				margin: 0 0 $space/2 0;
+			}
+		}
+	}
 	&#installation {
 		padding: $space*4 0;
 		position: relative;
@@ -243,18 +277,6 @@ section {
 			color: $blue;
 			font-weight: 400;
 			margin: $space/2 0;
-		}
-		a {
-			display: block;
-			color: $blue;
-			margin: 0 0 0 -8px;
-			font-weight: 700;
-			i.material-icons {
-				color: inherit;
-				position: relative;
-				top: 6px;
-				width: 16px;
-			}
 		}
 		.setup {
 			img {
