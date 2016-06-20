@@ -245,9 +245,6 @@ section#powered-by-chromecast {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -259,7 +256,9 @@ section#powered-by-chromecast {
     section#powered-by-chromecast div.container div.holder {
       background: white;
       position: relative;
-      width: 500px;
+      min-width: 400px;
+      max-width: 500px;
+      width: 50%;
       -webkit-flex: .5;
       -ms-flex: .5;
       flex: .5;
@@ -279,8 +278,8 @@ section#powered-by-chromecast {
           border-radius: 100px;
           width: 100px; }
       section#powered-by-chromecast div.container div.holder img.powered {
-        width: 70%;
-        margin: 32px 0; }
+        width: 50%;
+        margin: 0 0 16px; }
   section#powered-by-chromecast h2 {
     color: #1EB1FC;
     font-weight: 400;
@@ -312,7 +311,11 @@ section#installation {
     display: block;
     margin: 32px auto; }
   section#installation .request {
-    margin: 0 auto; }
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    float: left;
+    left: 0; }
     section#installation .request a.button.request {
       color: white; }
 section#faq {

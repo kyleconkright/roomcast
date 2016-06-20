@@ -189,7 +189,7 @@ section {
 		}
 		div.container {
 			display: flex;
-			flex-direction: column;
+			// flex-direction: column;
 			justify-content: center;
 			align-items: center;
 			height: inherit;
@@ -197,7 +197,9 @@ section {
 			div.holder {
 				background: white;
 				position: relative;
-				width: 500px;
+				min-width: 400px;
+				max-width: 500px;
+				width: 50%;
 				flex: .5;
 				padding: $space $space*3 $space*4;
 				@include tablet {
@@ -217,8 +219,8 @@ section {
 					}
 				}
 				img.powered {
-					width: 70%;
-					margin: $space*2 0;
+					width: 50%;
+					margin: 0 0 $space;
 				}
 			}
 		}
@@ -263,6 +265,11 @@ section {
 		}
 		.request {
 			margin: 0 auto;
+			position: relative;
+			text-align: center;
+			// width: 100%;
+			float: left;
+			left: 0;
 			a.button.request {
 				color: white;
 			}
