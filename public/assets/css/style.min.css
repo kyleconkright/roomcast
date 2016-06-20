@@ -286,12 +286,13 @@ section#powered-by-chromecast {
     font-weight: 400;
     margin: 8px 0; }
 section#installation {
-  padding: 64px 0; }
+  padding: 64px 0;
+  position: relative; }
   @media handheld, screen and (max-width: 769px) {
     section#installation .container {
-      -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-      flex-direction: column; } }
+      -webkit-flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse; } }
   section#installation h2 {
     color: #1EB1FC;
     font-weight: 400;
@@ -310,6 +311,10 @@ section#installation {
     width: 80%;
     display: block;
     margin: 32px auto; }
+  section#installation .request {
+    margin: 0 auto; }
+    section#installation .request a.button.request {
+      color: white; }
 section#faq {
   background: #EEEEEE;
   padding: 64px 0; }

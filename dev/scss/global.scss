@@ -230,9 +230,11 @@ section {
 	}
 	&#installation {
 		padding: $space*4 0;
+		position: relative;
 		.container {
 			@include tablet {
-				flex-direction: column;
+				flex-direction: column-reverse;
+
 			}
 		}
 		h2 {
@@ -257,6 +259,12 @@ section {
 				width: 80%;
 				display: block;
 				margin: $space*2 auto;
+			}
+		}
+		.request {
+			margin: 0 auto;
+			a.button.request {
+				color: white;
 			}
 		}
 	}
