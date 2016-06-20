@@ -7,6 +7,10 @@ footer .container {
 	border: solid 1px $grey;
 	border-width: 1px 0 0;
 	display: flex;
+	@include tablet {
+		flex-direction: column;
+		line-height: 2.5em;
+	}
 	a {
 		color: $blue;
 		margin: 0 0 0 $space/2;
@@ -17,5 +21,12 @@ footer .container {
 	div:last-of-type {
 		display: flex;
 		justify-content: flex-end;
+		@include tablet {
+			display: block;
+			a {
+				display: block;
+				margin: 0;
+			}
+		}
 	}
 }
