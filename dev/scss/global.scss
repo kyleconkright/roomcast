@@ -252,6 +252,13 @@ section {
 				width: 16px;
 			}
 		}
+		.setup {
+			img {
+				width: 80%;
+				display: block;
+				margin: $space*2 auto;
+			}
+		}
 	}
 	&#faq {
 		background: $grey;
