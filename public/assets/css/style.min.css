@@ -231,6 +231,11 @@ section#powered-by-chromecast {
 section#compatible-devices {
   padding: 64px 0;
   border-bottom: 1px solid #EEEEEE; }
+  @media handheld, screen and (max-width: 769px) {
+    section#compatible-devices .container {
+      -webkit-flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse; } }
   section#compatible-devices div.devices {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -245,6 +250,10 @@ section#compatible-devices {
       width: 80%;
       margin: 0 auto;
       display: block; }
+      @media handheld, screen and (max-width: 769px) {
+        section#compatible-devices div.devices img {
+          margin: 32px auto 0;
+          width: 100%; } }
   section#compatible-devices div.copy h2 {
     color: #1EB1FC;
     font-weight: 400;
@@ -368,6 +377,29 @@ header {
       header a.mobile-menu-trigger i {
         font-size: 28px; } }
 
+footer .container {
+  padding: 32px 0;
+  font-size: .9em;
+  border: solid 1px #EEEEEE;
+  border-width: 1px 0 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  footer .container a {
+    color: #1EB1FC;
+    margin: 0 0 0 8px; }
+  footer .container > * {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+  footer .container div:last-of-type {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+
 div#request-sample-box {
   background: #1EB1FC;
   padding: 16px;
@@ -469,26 +501,3 @@ div#request-sample-box {
   100% {
     -webkit-transform: scale(1);
     transform: scale(1); } }
-
-footer .container {
-  padding: 32px 0;
-  font-size: .9em;
-  border: solid 1px #EEEEEE;
-  border-width: 1px 0 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
-  footer .container a {
-    color: #1EB1FC;
-    margin: 0 0 0 8px; }
-  footer .container > * {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1; }
-  footer .container div:last-of-type {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: flex-end;
-    -ms-flex-pack: end;
-    justify-content: flex-end; }

@@ -249,6 +249,11 @@ section {
 	&#compatible-devices {
 		padding: $space*4 0;
 		border-bottom: 1px solid $grey;
+		.container {
+			@include tablet {
+				flex-direction: column-reverse;
+			}
+		}
 		div.devices {
 			display: flex;
 			justify-content: center;
@@ -257,6 +262,10 @@ section {
 				width: 80%;
 				margin: 0 auto;
 				display: block;
+				@include tablet {
+					margin: $space*2 auto 0;
+					width: 100%;
+				}
 			}
 		}
 		div.copy {
