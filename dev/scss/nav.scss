@@ -20,6 +20,7 @@ header {
 				display: block;
 				width: 100%;
 				height: 100%;
+
 			}
 			@include tablet {
 
@@ -37,6 +38,13 @@ header {
 					font-size: .95em;
 					color: #797979;
 					letter-spacing: -0.01em;
+
+				}
+				&.mobile {
+					display: none;
+					@include tablet {
+						display: inline;
+					}
 				}
 			}
 			@include tablet {
