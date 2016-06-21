@@ -38,8 +38,9 @@
 				restrict: "E",
 				controller: ['$scope', 'ngProgressLite', '$location', function($scope, ngProgressLite, $location) {
 					$scope.path = $location.path();
-					// $scope.request = closeForm('a.button.request','div#request-sample-box');
-					// $scope.openForm = closeForm('div.close','div#request-sample-box')
+					$scope.request = closeForm('a.button.request','div#request-sample-box');
+					$scope.openForm = closeForm('div.close','div#request-sample-box');
+
 				}],
 				link: function(scope, elem, attrs) {
 					anifade('div.headline',500,800);
@@ -47,8 +48,20 @@
 					window.sr = ScrollReveal({ reset: true });
 					sr.reveal('.hand', {rotate: {z: 20 }});
 					sr.reveal('#hotel-room .holder');
-
 					openAnswer('li.question span.q');
+
+					$('form#RoomCast').on('submit', function(e){
+						e.preventDefault();
+						$.ajax({
+							type: "GET",
+							url: "http://analytics.clickdimensions.com/forms/h/aU2xh5ahBx0SIibIBaQksw&c=?",
+							data: $('form#RoomCast').serialize(),
+							contentType: "application/json; charset=utf-8",
+							success: function(data){
+								alert(data)
+							}
+						});
+					});
 				}
 			}
 		});
