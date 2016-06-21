@@ -107,6 +107,130 @@ header {
       header a.mobile-menu-trigger i {
         font-size: 28px; } }
 
+div#request-sample-box {
+  overflow: scroll;
+  background: #1EB1FC;
+  padding: 16px;
+  position: fixed;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  opacity: 0;
+  transition: all .1s ease-in-out; }
+  div#request-sample-box div.close {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    right: 0;
+    color: white;
+    padding: 32px; }
+    div#request-sample-box div.close i {
+      font-size: 2em; }
+  div#request-sample-box form {
+    width: 60%; }
+    @media handheld, screen and (max-width: 769px) {
+      div#request-sample-box form {
+        width: 90%; } }
+    div#request-sample-box form h1 {
+      margin: 0 0 32px; }
+    div#request-sample-box form div.holder {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+      div#request-sample-box form div.holder div {
+        -webkit-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        padding: 8px; }
+        @media handheld, screen and (max-width: 769px) {
+          div#request-sample-box form div.holder div {
+            padding: 5.33333px; } }
+        div#request-sample-box form div.holder div label, div#request-sample-box form div.holder div input {
+          display: inline-block;
+          font-size: 1.25em;
+          letter-spacing: 1px;
+          font-weight: 100;
+          color: #eee;
+          margin: 0 0 4px; }
+        div#request-sample-box form div.holder div input {
+          display: block;
+          background: rgba(255, 255, 255, 0.1);
+          border: none;
+          font-size: 1.5em;
+          padding: 8px;
+          width: 100%; }
+        div#request-sample-box form div.holder div.phone {
+          width: 100%;
+          -webkit-flex-basis: 100%;
+          -ms-flex-preferred-size: 100%;
+          flex-basis: 100%; }
+    div#request-sample-box form button {
+      background: #1788c2;
+      font-size: 1.5em;
+      letter-spacing: 1px;
+      padding: 12.8px 24px;
+      color: white;
+      font-weight: 400;
+      border: none;
+      border-radius: 2px;
+      float: right;
+      cursor: pointer;
+      margin: 32px 0 0; }
+      @media handheld, screen and (max-width: 769px) {
+        div#request-sample-box form button {
+          width: 100%; } }
+  div#request-sample-box.open {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+    -webkit-animation: drop .5s;
+    animation: drop .5s; }
+  @media handheld, screen and (max-width: 769px) {
+    div#request-sample-box {
+      font-size: .85em; } }
+
+@-webkit-keyframes drop {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes drop {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
 * {
   margin: 0;
   padding: 0;
@@ -427,105 +551,3 @@ section#faq {
       top: 6px;
       width: 24px;
       color: #1EB1FC; }
-
-div#request-sample-box {
-  background: #1EB1FC;
-  padding: 16px;
-  position: fixed;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  z-index: 1000;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: scale(0);
-  -ms-transform: scale(0);
-  transform: scale(0);
-  opacity: 0;
-  transition: all .1s ease-in-out; }
-  div#request-sample-box div.close {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    right: 0;
-    color: white;
-    padding: 32px; }
-    div#request-sample-box div.close i {
-      font-size: 2em; }
-  div#request-sample-box form {
-    width: 60%; }
-    @media handheld, screen and (max-width: 769px) {
-      div#request-sample-box form {
-        width: 90%; } }
-    div#request-sample-box form h1 {
-      margin: 0 0 32px; }
-    div#request-sample-box form div label, div#request-sample-box form div input {
-      display: inline-block;
-      font-size: 1.25em;
-      letter-spacing: 1px;
-      font-weight: 100;
-      color: #eee;
-      margin: 0 0 4px; }
-    div#request-sample-box form div input {
-      display: block;
-      background: rgba(255, 255, 255, 0.1);
-      border: none;
-      font-size: 1.5em;
-      padding: 8px;
-      width: 100%; }
-    div#request-sample-box form div:not(:first-of-type) {
-      margin: 16px 0 0; }
-    div#request-sample-box form button {
-      background: #1788c2;
-      font-size: 1.5em;
-      letter-spacing: 1px;
-      padding: 12.8px 24px;
-      color: white;
-      font-weight: 400;
-      border: none;
-      border-radius: 2px;
-      float: right;
-      cursor: pointer;
-      margin: 32px 0 0; }
-      @media handheld, screen and (max-width: 769px) {
-        div#request-sample-box form button {
-          width: 100%; } }
-  div#request-sample-box.open {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    opacity: 1;
-    -webkit-animation: drop .5s;
-    animation: drop .5s; }
-
-@-webkit-keyframes drop {
-  0% {
-    -webkit-transform: scale(0);
-    transform: scale(0); }
-  50% {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05); }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1); } }
-
-@keyframes drop {
-  0% {
-    -webkit-transform: scale(0);
-    transform: scale(0); }
-  50% {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05); }
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1); } }

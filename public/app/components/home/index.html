@@ -114,27 +114,58 @@
 	<div id="request-sample-box">
 		<div class="close"><i class="material-icons">close</i></div>
 		<form id="RoomCast" target="_blank" method="post" action="http://analytics.clickdimensions.com/forms/h/aU2xh5ahBx0SIibIBaQksw" name="RoomCast">
-			<h1>Get a sample of RoomCast</h1>
-			<div>
-				<label for="rc_firstname">First Name</label>
-				<input id="rc_firstname" type="text" name="rc_firstname" autocomplete="off"> 
+			<h1>Request a Quote for RoomCast</h1>
+
+			<div class="holder">
+				<div>
+					<label for="rc_fName">First Name</label>
+					<input id="rc_fName" type="text" name="rc_fName" autocomplete="off" required> 
+				</div>
+
+				<div>
+					<label for="rc_lName">Last Name</label>
+					<input id="rc_lName" type="text" name="rc_lName" autocomplete="off" required>
+				</div>
 			</div>
 
-			<div>
-				<label for="rc_lastname">Last Name</label>
-				<input id="rc_lastname" type="text" name="rc_lastname" autocomplete="off">
+			<div class="holder">
+				<div>
+					<label for="rc_email">Email Address</label>
+					<input id="rc_email" type="email" name="rc_email" autocomplete="off" required>
+				</div>
 			</div>
 
-			<div>
-				<label for="rc_email">Email Address</label>
-				<input id="rc_email" type="email" name="rc_email" autocomplete="off">
+			<div class="holder">
+				<div>
+					<label for="rc_city">City</label>
+					<input id="rc_city" type="text" name="rc_city" autocomplete="off" required>
+				</div>
+
+				<div>
+					<label for="rc_country">Country</label>
+					<input id="rc_country" type="text" name="rc_country" autocomplete="off" required>
+				</div>
 			</div>
 
-			<div>
-				<label for="rc_company">Company</label>
-				<input id="rc_company" type="text" name="rc_company" autocomplete="off">
+			
+			<div class="holder">
+				<div>
+					<label for="rc_company">Company</label>
+					<input id="rc_company" type="text" name="rc_company" autocomplete="off" required>
+				</div>
+
+				<div>
+					<label for="rc_position">Position</label>
+					<input id="rc_position" type="text" name="rc_position" autocomplete="off" required>
+				</div>
+
+				<div class="phone">
+					<label for="rc_telephone">Phone</label>
+					<input id="rc_telephone" type="text" name="rc_telephone" autocomplete="off" required>
+				</div>
 			</div>
-			<button>Send Me a Sample</button>
+			
+			<button>Send Me a Quote</button>
 		</form>
 	</div>
 
