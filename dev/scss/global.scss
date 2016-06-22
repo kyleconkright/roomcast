@@ -195,49 +195,60 @@ section {
 		}
 	}
 	&#powered-by-chromecast {
-		height: 80vh;
-		min-height: 500px;
 		background: url('../../assets/img/hotelroom.jpg') center;
 		background-size: cover;
+		padding: $space*4 0 $space*6;
 		position: relative;
 		@include tablet {
-			padding: $space 0;
-			height: 60vh;
+			background: white;
+			padding: $space*2 0;
 		}
 		div.container {
 			display: flex;
-			// flex-direction: column;
-			justify-content: center;
+			flex-direction: column;
 			align-items: center;
-			height: inherit;
-			min-height: inherit;
-			div.holder {
-				background: white;
-				position: relative;
-				min-width: 400px;
-				max-width: 500px;
-				width: 50%;
-				flex: .5;
-				padding: $space $space*3 $space*6;
+			@include tablet {
+				flex-direction: column;
+				width: 100%;
+			}
+			div.hotel-image {
+				display: none;
+				flex: 1;
 				@include tablet {
-					width: 90%;
+					display: block;
+
 				}
-				.chromecast-icon {
-					position: absolute;
-					width: 100%;
-					left: 0;
-					bottom: -54px;
-					text-align: center;
-					img {
-						background: white;
-						padding: $space/2;
-						border-radius: 100px;
-						width: 100px;
+			}
+			div.copy {
+				flex: 1;
+				div.holder {
+					background: white;
+					position: relative;
+					min-width: 400px;
+					max-width: 500px;
+					// width: 50%;
+					padding: $space $space*3 $space*6;
+					@include tablet {
+						width: 90%;
+						flex: 1;
 					}
-				}
-				img.powered {
-					width: 50%;
-					margin: 0 0 $space;
+					.chromecast-icon {
+						position: absolute;
+						width: 100%;
+						left: 0;
+						bottom: -54px;
+						text-align: center;
+						img {
+							background: white;
+							padding: $space/2;
+							border-radius: 100px;
+							width: 100px;
+						}
+					}
+					img.powered {
+						width: 50%;
+						margin: 0 0 $space;
+					}
 				}
 			}
 		}
@@ -251,7 +262,7 @@ section {
 			width: 100%;
 			bottom: -10%;
 			@include tablet {
-				display: none;
+				top: 0;
 			}
 			img {
 				width: 30%;
@@ -259,6 +270,10 @@ section {
 				min-width: 280px;
 				float: right;
 				padding: 0 $space;
+				@include tablet {
+					max-width: 220px;
+					min-width: 180px;
+				}
 			}
 		}
 	}
