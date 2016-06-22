@@ -56,7 +56,8 @@
 							type: "GET",
 							url: "http://analytics.clickdimensions.com/forms/h/aU2xh5ahBx0SIibIBaQksw&c=?",
 							data: $('form#RoomCast').serialize(),
-							contentType: "application/json; charset=utf-8",
+							contentType: "application/x-www-form-urlencoded",
+							Referer: "http://mysite.com/",
 							success: function(data){
 								alert(data)
 							}
