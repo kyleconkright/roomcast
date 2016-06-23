@@ -201,7 +201,7 @@ section {
 		position: relative;
 		@include tablet {
 			background: white;
-			padding: $space*2 0;
+			padding: $space*2 0 0;
 		}
 		div.container {
 			display: flex;
@@ -229,8 +229,9 @@ section {
 					// width: 50%;
 					padding: $space $space*3 $space*6;
 					@include tablet {
-						width: 90%;
+						min-width: 0;
 						flex: 1;
+						padding: $space*2 0 0;
 					}
 					.chromecast-icon {
 						position: absolute;
@@ -243,6 +244,12 @@ section {
 							padding: $space/2;
 							border-radius: 100px;
 							width: 100px;
+						}
+						@include tablet {
+							top: -44px;
+							img {
+								width: 80px;
+							}
 						}
 					}
 					img.powered {
@@ -302,6 +309,7 @@ section {
 			}
 		}
 		div.copy {
+			padding: 0 $space;
 			h2 {
 				color: $blue;
 				font-weight: 400;
