@@ -328,18 +328,18 @@ section {
 		}
 		table {
 			border-collapse: collapse;
-			tr:nth-of-type(odd) {
-				
-			}
 			thead {
 				tr {
 					background: #F4F6F7;
-				}
-				tr th {
+					font-size: .9em;
 					font-weight: 400;
 					color: $blue;
+					@include tablet {
+						font-size: .8em;
+					}
 				}
 			}
+
 			tbody {
 				tr:nth-of-type(even) {
 					background: #F4F6F7;
@@ -358,10 +358,13 @@ section {
 			th:first-of-type, tr td:first-of-type {
 				text-align: left;
 				padding: 1% 2%;
-				width: 25%;
+				width: 20%;
+				@include tablet {
+					width: 50%;
+				}
 			}
 			td:last-of-type, th:last-of-type {
-				width: 30%;
+				width: 35%;
 				text-align: left;
 				@include tablet {
 					display: none;
@@ -378,6 +381,18 @@ section {
 						display: block;
 						font-weight: 300;
 					}
+				}
+			}
+			.mobile {
+				display: none;
+			}
+			@include tablet {
+				font-size: .95em;
+				.not-mobile {
+					display: none;
+				}
+				.mobile {
+					display: inline-block;
 				}
 			}
 		}
