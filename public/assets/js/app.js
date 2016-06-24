@@ -62,17 +62,22 @@
 					});
 
 
+					var settings = {
+					  "async": true,
+					  "crossDomain": true,
+					  "url": "http://analytics.clickdimensions.com/forms/h/aU2xh5ahBx0SIibIBaQksw?cd_visitorkey=v2294610734264_71186AF55E674FE78A5CEEF96E0FB1A2&rc_fName=Kyle&rc_lName=Conkright&rc_email=kyleconkright%40gmail.com&rc_city=Los%20Angeles&rc_country=US&rc_company=Goodhatch&rc_position=Test&rc_telephone=3231231234",
+					  "method": "POST",
+					  "headers": {
+					    "content-type": "application/x-www-form-urlencoded",
+					    "referer": "http://roomcast.teleadapt.com",
+					    "cache-control": "no-cache"
+					  }
+					}
+
 					$('form#RoomCast').on('submit', function(e){
 						e.preventDefault();
-						$.ajax({
-							type: "GET",
-							url: "http://analytics.clickdimensions.com/forms/h/aU2xh5ahBx0SIibIBaQksw&c=?",
-							data: $('form#RoomCast').serialize(),
-							contentType: "application/x-www-form-urlencoded",
-							Referer: "http://mysite.com/",
-							success: function(data){
-								alert(data)
-							}
+						$.ajax(settings).done(function (response) {
+						  console.log(response);
 						});
 					});
 				}
