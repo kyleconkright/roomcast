@@ -69,8 +69,8 @@
 					  "method": "POST",
 					  "headers": {
 					    "content-type": "application/x-www-form-urlencoded",
-					    "referer": "http://roomcast.teleadapt.com",
-					    "cache-control": "no-cache"
+					    // "referer": "http://roomcast.teleadapt.com",
+					    // "cache-control": "no-cache"
 					  }
 					}
 
