@@ -47,8 +47,20 @@
 					anifade('div.hero img',400,1500);
 					window.sr = ScrollReveal({ reset: true });
 					sr.reveal('.hand', {rotate: {z: 20 }});
-					sr.reveal('#hotel-room .holder');
+					sr.reveal('#powered-by-chromecast .holder');
 					openAnswer('li.question span.q');
+
+					var cells = [];
+
+					$.each($('table#comparison tr td:last-of-type'), function(i) {
+						cells.push(this.innerHTML);
+					});
+
+
+					$.each($('table#comparison tr td:first-of-type'), function(i){
+						$(this).append(cells[i]);
+					});
+
 
 					$('form#RoomCast').on('submit', function(e){
 						e.preventDefault();

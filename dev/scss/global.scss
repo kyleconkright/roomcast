@@ -317,6 +317,71 @@ section {
 			}
 		}
 	}
+	&#compare {
+		padding: $space*4 0;
+		.container {
+			display: block;
+			h1 {
+				padding: 0;
+				margin: 0 0 $space*2;
+			}
+		}
+		table {
+			border-collapse: collapse;
+			tr:nth-of-type(odd) {
+				
+			}
+			thead {
+				tr {
+					background: #F4F6F7;
+				}
+				tr th {
+					font-weight: 400;
+					color: $blue;
+				}
+			}
+			tbody {
+				tr:nth-of-type(even) {
+					background: #F4F6F7;
+				}
+			}
+			th, tr, td {
+				padding: 1%;
+				text-align: center;
+				i {
+					color: $blue;
+				}
+			}
+			tr:first-of-type {
+				border: none;
+			}
+			th:first-of-type, tr td:first-of-type {
+				text-align: left;
+				padding: 1% 2%;
+				width: 25%;
+			}
+			td:last-of-type, th:last-of-type {
+				width: 30%;
+				text-align: left;
+				@include tablet {
+					display: none;
+				}
+			}
+			td:first-of-type {
+				@include tablet {
+					font-weight: 400;
+				}
+				p {
+					display: none;
+					margin: $space 0;
+					@include tablet {
+						display: block;
+						font-weight: 300;
+					}
+				}
+			}
+		}
+	}
 	&#installation {
 		padding: $space*4 0;
 		position: relative;
