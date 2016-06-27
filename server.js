@@ -36,10 +36,10 @@ app.post('/quote', function(req, res){
 		} 
 	};
 	console.log(options);
-	// request(options, function (error, response, body) {
-	// 	if (error) throw new Error(error);
-	// 	console.log(body);
-	// });
+	request(options, function (error, response, body) {
+		if (error) throw new Error(error);
+		console.log(body);
+	});
 });
 
 
