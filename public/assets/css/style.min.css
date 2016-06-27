@@ -555,7 +555,8 @@ div#request-sample-box {
       div#request-sample-box form {
         width: 90%; } }
     div#request-sample-box form h1 {
-      margin: 0 0 32px; }
+      margin: 0 0 32px;
+      text-align: center; }
     div#request-sample-box form div.holder {
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -599,9 +600,8 @@ div#request-sample-box {
       font-weight: 400;
       border: none;
       border-radius: 2px;
-      float: right;
       cursor: pointer;
-      margin: 32px 0 0; }
+      margin: 32px auto 0; }
       @media handheld, screen and (max-width: 769px) {
         div#request-sample-box form button {
           width: 100%; } }
@@ -615,6 +615,9 @@ div#request-sample-box {
   @media handheld, screen and (max-width: 769px) {
     div#request-sample-box {
       font-size: .85em; } }
+  div#request-sample-box #thanks {
+    text-align: center;
+    color: white; }
 
 @-webkit-keyframes drop {
   0% {

@@ -37,6 +37,7 @@ div#request-sample-box {
 		}
 		h1 {
 			margin: 0 0 $space*2;
+			text-align: center;
 		}
 		div.holder {
 			display: flex;
@@ -82,9 +83,8 @@ div#request-sample-box {
 			font-weight: 400;
 			border: none;
 			border-radius: 2px;
-			float: right;
 			cursor: pointer;
-			margin: $space*2 0 0;
+			margin: $space*2 auto 0;
 			@include tablet {
 				width: 100%;
 			}
@@ -97,6 +97,10 @@ div#request-sample-box {
 	}
 	@include tablet {
 		font-size: .85em;
+	}
+	#thanks {
+		text-align: center;
+		color: white;
 	}
 }
 
