@@ -25,6 +25,7 @@ app.post('/quote', function(req, res){
 			rc_company: req.body.rc_company,
 			rc_position: req.body.rc_position,
 			rc_telephone: req.body.rc_telephone,
+			rc_quantity: req.body.rc_quantity,
 			rc_topic: 'RoomCast Quote Request',
 			rc_product: 'RoomCast'
 
