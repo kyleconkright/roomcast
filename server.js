@@ -29,8 +29,7 @@ app.post('/quote', function(req, res){
 			rc_source: req.body.rc_source,
 			rc_comment: req.body.rc_comment,
 			rc_topic: 'RoomCast Quote Request',
-			rc_product: 'RoomCast',
-			rc_source: 'http://roomcast.teleadapt.com'
+			rc_product: 'RoomCast'
 
 		},
 		headers: {
