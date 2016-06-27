@@ -8,7 +8,7 @@ div#request-sample-box {
 	position: fixed;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	// justify-content: center;
 	align-items: center;
 	z-index: 1000;
 	top: 0;
@@ -30,7 +30,7 @@ div#request-sample-box {
 		
 	}
 	form {
-		width: 60%;
+		width: 80%;
 		// margin: 0 auto;
 		@include tablet {
 			width: 90%;
@@ -48,7 +48,7 @@ div#request-sample-box {
 				@include tablet {
 					padding: $space/3;
 				}
-				label, input {
+				label, input, textarea {
 					display: inline-block;
 					font-size: 1.25em;
 					letter-spacing: 1px;
@@ -71,6 +71,13 @@ div#request-sample-box {
 					background: #34B9FC;
 					color: white;
 					font-size: 1.2em;
+				}
+				textarea {
+					display: block;
+					padding: $space/2;
+					width: 100%;
+					border: none;
+					background: rgba(255,255,255,.1);
 				}
 				&:not(:first-of-type) {
 					// margin: $space 0 0;
@@ -109,6 +116,10 @@ div#request-sample-box {
 	#thanks {
 		text-align: center;
 		color: white;
+		justify-content: center;
+	    align-items: center;
+	    display: flex;
+	    height: 100vh;
 	}
 }
 
