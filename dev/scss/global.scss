@@ -397,6 +397,50 @@ section {
 			}
 		}
 	}
+	&#press {
+		background: #FFBA31;
+		text-align: center;
+		color: white;
+		font-weight: 500;
+		padding: $space*4 0 $space*3;
+		position: relative;
+		div.container {
+			width: 70%;
+			@include tablet {
+				width: 100%;
+			}
+			h1 {
+				font-style: italic;
+				margin: 0 0 $space*2;
+			}
+			p.source {
+				font-weight: 200;
+				margin: 0;
+			}
+		}
+		div.download {
+			display: flex;
+			width: 90%;
+			margin: $space*2 auto 0;
+			@include tablet {
+				flex-direction: column;
+			}
+			div, p {
+				flex: 1;
+				text-align: left;
+				padding: 0 $space;
+				@include tablet {
+					text-align: center;
+				}
+			}
+			div {
+				padding: 0 $space*2;
+				@include tablet {
+					display: none;
+				}
+			}
+		}
+	}
 	&#installation {
 		padding: $space*4 0;
 		position: relative;
