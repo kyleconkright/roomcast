@@ -45,9 +45,9 @@
 				link: function(scope, elem, attrs) {
 					anifade('div.headline',500,800);
 					anifade('div.hero img',400,1500);
-					window.sr = ScrollReveal({ reset: true });
-					sr.reveal('.hand', {rotate: {z: 20 }});
-					sr.reveal('#powered-by-chromecast .holder');
+					// window.sr = ScrollReveal({ reset: true });
+					// sr.reveal('.hand', {rotate: {z: 20 }});
+					// sr.reveal('#powered-by-chromecast .holder');
 					openAnswer('li.question span.q');
 
 					var cells = [];
@@ -103,6 +103,7 @@
 	}
 
 	var openAnswer = function(x){
+		console.log($(this));
 		$(x).on('click', function(){
 			if($(this).hasClass('open')) {
 				$(this).removeClass('open');
