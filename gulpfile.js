@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var serve = require('gulp-serve');
 var sass = require('gulp-ruby-sass');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -27,3 +28,13 @@ gulp.task('watch', function(){
 	gulp.watch('dev/scss/*.scss', ['style']);
 	gulp.watch('dev/js/*.js', ['scripts']);
 });
+
+gulp.task('serve', serve('public'));
+gulp.task('serve-build', serve(['public', 'build']));
+gulp.task('serve-prod', serve({
+  root: ['public', 'build'],
+  port: 80,
+  middleware: function(req, res) {
+    // custom optional middleware 
+  }
+}));
